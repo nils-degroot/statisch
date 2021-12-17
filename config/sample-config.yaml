@@ -1,0 +1,30 @@
+# Title of the page
+title: Statisch
+# Theme to use
+theme: gruvbox
+# Font to use
+font: some-font.ttf
+
+# Applications section, must be a list
+applications:
+    # Name of the application
+  - name: Public git
+    # Link to the application
+    link: https://git.peeko.nl
+    # Icon for the application
+    icon: fa-brands:git-alt
+  - name: Github
+    link: https://github.com/nils-degroot
+    icon: fa-brands:github
+
+# Bookmarks, a list of mark sections
+bookmarks:
+  # Name of the section
+  - name: Media
+    marks:
+        # Name of the section
+      - name: Whatsapp
+        # Link to the bookmark
+        link: https://web.whatsapp.com
+      - name: Telegram
+        link: https://web.telegram.org/z
