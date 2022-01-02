@@ -30,7 +30,7 @@ fn main() {
             .takes_value(true))
         .arg(Arg::with_name("dump-html")
             .long("dump-html")
-            .help("Dump the html"))
+            .help("Dump the html to stdout"))
         .get_matches();
 
     // Parse the config
