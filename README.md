@@ -18,10 +18,10 @@ sudo ln -s `dir-to-statisch`/target/release/statisch /bin/statisch
 
 For a overview of options, use `statisch -h`.
 
-Sites can be generated in two ways. You can use `statisch --config
-<CONFIG_FILE> --dump-html` to push to output to stdout. Or to put all the
-required files into one directory, use `statisch --config <CONFIG_FILE> -o
-<OUTPUT_DIR>`.
+Sites can be generated in two ways. You can use 
+`statisch --config <CONFIG_FILE> --dump-html` to push to output to stdout. Or
+to put all the required files into one directory, use 
+`statisch --config <CONFIG_FILE> -o <OUTPUT_DIR>`.
 
 # Configuration
 
