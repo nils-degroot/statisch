@@ -4,6 +4,8 @@ title: Statisch
 theme: gruvbox
 # Font to use
 font: some-font.ttf
+# Favicon
+favicon: favicon.ico
 
 # Applications section, must be a list
 applications:

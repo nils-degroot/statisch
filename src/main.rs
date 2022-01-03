@@ -59,6 +59,12 @@ fn main() {
             File::create(path.join(page.stylesheet_name())).unwrap()
                 .write_all(page.stylesheet().as_bytes()).unwrap();
 
+            if let Some(favicon) = page.favicon() {
+                // Copy favicon
+                fs::copy(favicon, path.join(page.favicon_name()))
+                    .expect("Failed to copy favicon");
+            }
+
             if let (Some(font), Some(font_name)) = (page.font(), page.font_name()) {
                 // Copy font
                 fs::copy(font, path.join(font_name))
@@ -70,4 +76,6 @@ fn main() {
 
         return
     }
+
+    panic!("No export mode selected");
 }

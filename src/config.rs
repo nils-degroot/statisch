@@ -102,7 +102,9 @@ pub struct Config {
     applications: Vec<Application>,
     /// Bookmarks in the page
     #[serde(default = "Vec::new")]
-    bookmarks: Vec<BookmarkSection>
+    bookmarks: Vec<BookmarkSection>,
+    /// Favicon to copy
+    pub favicon: Option<PathBuf>
 }
 
 impl Config {

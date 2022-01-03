@@ -116,6 +116,12 @@ body {{
         )
     }
 
-    /// Returns the default name fot the stylesheet
+    /// Returns the default name for the stylesheet
     pub fn stylesheet_name(&self) -> &'static str { "style.css" }
+
+    /// Path to the favicon
+    pub fn favicon(&self) -> Option<&PathBuf> { self.config.favicon.as_ref() }
+
+    /// Export name for the favicon
+    pub fn favicon_name(&self) -> &'static str { "favicon.ico" }
 }
