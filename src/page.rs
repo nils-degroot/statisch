@@ -30,7 +30,7 @@ impl Page {
                 body {
                     div(class="container") {
                         // Applications
-                        @ if self.config.applications().len() > 0 {
+                        @ if !self.config.applications().is_empty() {
                             h4: "Applications";
                             div(class="grid") {
                                 @ for app in self.config.applications() {
@@ -42,7 +42,7 @@ impl Page {
                             }
                         }
                         // Bookmarks
-                        @ if self.config.bookmarks().len() > 0 {
+                        @ if !self.config.bookmarks().is_empty() {
                             h4(class="mb-0"): "Bookmarks";
                             div(class="grid") {
                                 @ for section in self.config.bookmarks() {

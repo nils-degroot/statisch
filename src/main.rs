@@ -35,8 +35,8 @@ fn main() {
 
     // Parse the config
     let config = matches.value_of("config")
-        .map(|p| Config::from_file(p))
-        .unwrap_or_else(|| Config::default());
+        .map(Config::from_file)
+        .unwrap_or_else(Config::default);
 
     // Dump the page to stdout
     if matches.is_present("dump-html") {
