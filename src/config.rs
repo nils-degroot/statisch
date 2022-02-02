@@ -65,7 +65,9 @@ pub struct Bookmark {
 #[derive(Debug, Serialize, Deserialize, Clone)]
 pub enum Theme {
     #[serde(rename = "gruvbox")]
-    Gruvbox
+    Gruvbox,
+    #[serde(rename = "srcery")]
+    Srcery
 }
 
 impl Theme {
@@ -73,8 +75,11 @@ impl Theme {
     pub fn style_header(&self) -> String {
         match self {
             Theme::Gruvbox => include_str!(concat!(
-                env!("CARGO_MANIFEST_DIR"), "/resources/themes/gruvbox.css"
+                env!("CARGO_MANIFEST_DIR"), "/resources/themes/gruvbox.css",
             )),
+            Theme::Srcery => include_str!(concat!(
+                env!("CARGO_MANIFEST_DIR"), "/resources/themes/srcery.css"
+            ))
         }.to_string()
     }
 }
